@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <!-- TÍTULO -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ColorLab"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:gravity="center"
+            android:paddingBottom="4dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Elige tu color favorito"
+            android:textSize="15sp"
+            android:textColor="#757575"
+            android:gravity="center"
+            android:paddingBottom="18dp"/>
+
+
+        <!-- COLOR SELECCIONADO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="20dp"
+            android:background="#2196F3">
+
+            <TextView
+                android:id="@+id/tvSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/selected_color"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/tvHex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#2196F3"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:paddingTop="8dp"/>
+
+        </LinearLayout>
+
+
+        <!-- BOTONES -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp">
+
+            <Button
+                android:id="@+id/btnFav"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/save_favorite"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btnTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="@string/apply_theme"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+
+        <!-- PALETA -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paleta de colores"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:paddingTop="10dp"
+            android:paddingBottom="4dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecciona un color"
+            android:textSize="14sp"
+            android:textColor="#757575"
+            android:paddingBottom="8dp"/>
+
+
+        <!-- CUADRÍCULA DE COLORES -->
+        <GridLayout
+            android:id="@+id/gridPalette"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:alignmentMode="alignMargins"
+            android:padding="4dp"/>
+
+
+        <!-- FAVORITOS -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mis favoritos"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:paddingTop="18dp"
+            android:paddingBottom="6dp"/>
+
+
+        <!-- LISTA DE FAVORITOS -->
+        <ListView
+            android:id="@+id/listFav"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:nestedScrollingEnabled="false"
+            android:dividerHeight="6dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
